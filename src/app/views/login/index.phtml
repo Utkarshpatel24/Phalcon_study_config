@@ -1,0 +1,27 @@
+<h2>login using this form</h2>
+
+<?php echo $this->tag->form("/login/check"); ?>
+
+    <p>
+        <label for="email">email</label>
+        <?php echo $this->tag->textField("email"); ?>
+    </p>
+
+    <p>
+        <label for="password">password</label>
+        <?php echo $this->tag->textField("password"); ?>
+    </p>
+    <p>
+        <?php echo $this->tag->checkField("remember"); ?>
+        <label for="password">Remember me</label>
+    </p>
+    
+    <p>
+        <?php echo $this->tag->submitButton("Register"); ?>
+    </p>
+</form>
+
+
+
+
+
