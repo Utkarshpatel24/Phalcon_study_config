@@ -34,6 +34,12 @@ $loader->registerDirs(
     ]
 );
 
+$loader->registerNamespaces(
+    [
+        'App\Components' => APP_PATH."/component"
+    ]
+);
+
 $loader->register();
 
 $container = new FactoryDefault();
