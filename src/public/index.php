@@ -15,6 +15,7 @@ use Phalcon\Session\Manager;
 use Phalcon\Session\Adapter\Stream;
 use Phalcon\Http\Response\Cookies;
 use Phalcon\Config\ConfigFactory;
+use Phalcon\Escaper;
 
 
 $config = new Config([]);
@@ -68,6 +69,13 @@ $container->set(
 );
 // print_r($container['config']['db']);
 // die();
+
+$container->set(
+    'escaper',
+    function() {
+        return new Escaper();
+    }
+);
 
 $container->set(
     'db',
